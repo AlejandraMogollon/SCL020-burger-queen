@@ -4,15 +4,9 @@ import { withRouter } from 'react-router-dom'
 
 const Tables = ({ history, setTableRegister }) => {
 
-
-
-    // useEffect(() => {
-    //     localStorage.setItem("tableId", JSON.stringify(tableName));
-    //   }, [tableName]);
-
     const goToMenu = (e) => {
         const tableName = e
-        console.log(tableName)
+        // console.log(tableName)
         setTableRegister(tableName)
 
         history.push('/menu')

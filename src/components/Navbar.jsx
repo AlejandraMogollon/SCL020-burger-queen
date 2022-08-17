@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { auth, signOut } from '../firebase/init'
 import { withRouter } from 'react-router-dom'
 
@@ -42,7 +42,7 @@ const Navbar = ({history, firebaseUser}) => {
                         firebaseUser !== null ? (
                             <button className="btn btn-light" onClick={() => cerrarSesion()} >Cerrar Sesión</button>
                         ) : (
-                            <NavLink className="btn btn-light mrg-2" to="/login" exact>
+                            <NavLink className="btn btn-light mrg-2" to="/" exact>
                                 Login
                             </NavLink>
 

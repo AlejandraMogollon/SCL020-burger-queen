@@ -9,15 +9,19 @@ const WelcomeWaiter = ({history}) => {
             history.push('/makeorder');
     }
 
+    const goToSeeOrders = () =>{
+        history.push('/orderswaiter')
+    }
+
     return (
         <div className='containerbtn'>
             <div className='btnCheffunction'>
-                <img src={MakeOrder} className="sticker-fit" onClick={()=>goToMakeOrder()}/>
+                <img src={MakeOrder} className="sticker-fit" alt='makeorder' onClick={()=>goToMakeOrder()}/>
                 <div className='textFunctionbtn'>REALIZAR PEDIDO</div>
             </div>
             <div className='btnCheffunction' >
-                <img src={ViewOrder} className="sticker-fit" />
-                <div className='textFunctionbtn'>VER PEDIDOS</div>
+                <img src={ViewOrder} className="sticker-fit" alt='vieworder' onClick={()=>goToSeeOrders()}/>
+                <div className='textFunctionbtn' >VER PEDIDOS</div>
             </div>
             
         </div>

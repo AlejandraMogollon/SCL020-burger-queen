@@ -3,6 +3,7 @@ import menudata from "../menudata.json";
 import { useState, useEffect } from "react";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 import { withRouter } from 'react-router-dom'
+import {getFormatCurrency} from '../utils/transformcurrency'
 
 const Menu = ({ history, setOrders, tableRegister }) => {
   // CONTADOR
@@ -82,7 +83,7 @@ const Menu = ({ history, setOrders, tableRegister }) => {
             return (
               <div className="containerPriceFoodCountMenu" key={food.id}>
                 <div className="textFoodNameMenu">{food.name}</div>
-                <div className="textFoodNameMenu">{food.price}$</div>
+                <div className="textFoodNameMenu">{getFormatCurrency(food.price)}$</div>
                 <button
                   className="buttonCountMenu"
                   onClick={() => updateMenuSelected(food.id, false)}
@@ -107,7 +108,7 @@ const Menu = ({ history, setOrders, tableRegister }) => {
             return (
               <div className="containerPriceFoodCountMenu" key={food.id}>
                 <div className="textFoodNameMenu">{food.name}</div>
-                <div className="textFoodNameMenu">{food.price}$</div>
+                <div className="textFoodNameMenu">{getFormatCurrency(food.price)}$</div>
                 <button
                   className="buttonCountMenu"
                   onClick={() => updateMenuSelected(food.id, false)}
@@ -132,7 +133,7 @@ const Menu = ({ history, setOrders, tableRegister }) => {
             return (
               <div className="containerPriceFoodCountMenu" key={food.id}>
                 <div className="textFoodNameMenu">{food.name}</div>
-                <div className="textFoodNameMenu">{food.price}$</div>
+                <div className="textFoodNameMenu">{getFormatCurrency(food.price)}$</div>
                 <button
                   className="buttonCountMenu"
                   onClick={() => updateMenuSelected(food.id, false)}

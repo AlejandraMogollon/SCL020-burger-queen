@@ -1,9 +1,10 @@
-import { db, collection, addDoc, Timestamp } from "./init.js";
+import { db, collection, addDoc } from "./init.js";
 
 export const createOrders = async (currentUser, tableName, order) => {
+  const today = new Date();
   try {
     const docRef = await addDoc(collection(db, "orders"), {
-      time: Timestamp.now(),
+      time: today,
       user: currentUser,
       tableName,
       order,

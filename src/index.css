@@ -297,6 +297,52 @@
     border-radius: 5%;
 }
 
+.containerOrderOnTimeKitchen{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    /* outline: 2px solid red; */
+    font-size: 200%;
+    margin: 5%;
+    width: 500px;
+    font-weight: bolder;
+    background-color: #d2d0cd;
+    border-radius: 5%;
+    outline: 10px solid rgb(120, 242, 75);
+}
+
+.containerOrderFiveMinKitchen{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    /* outline: 2px solid red; */
+    font-size: 200%;
+    margin: 5%;
+    width: 500px;
+    font-weight: bolder;
+    background-color: #d2d0cd;
+    border-radius: 5%;
+    outline: 10px solid #fff64f;
+}
+
+.containerOrderDelayedKitchen{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    /* outline: 2px solid red; */
+    font-size: 200%;
+    margin: 5%;
+    width: 500px;
+    font-weight: bolder;
+    background-color: #d2d0cd;
+    border-radius: 5%;
+    outline: 10px solid #e42e25;
+}
+
+
 .containerAllButtonsOrderChef {
     display: flex;
     flex-direction: row;

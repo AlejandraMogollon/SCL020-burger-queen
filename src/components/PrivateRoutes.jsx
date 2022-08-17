@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom'
 const PrivateRoutes = ({children}) => {
   return (
     <Fragment>
-        { auth.currentUser ? children : <Redirect to={'/login'} /> }
+        { auth.currentUser ? children : <Redirect to={'/'} /> }
 
     </Fragment>
   )

@@ -17,6 +17,7 @@ import {
   orderBy,
   Timestamp,
   updateDoc,
+  doc,
 } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
 import firebaseConfig from "./firebaseConfig";
 
@@ -41,4 +42,5 @@ export {
   signOut,
   Timestamp,
   updateDoc,
+  doc,
 };
