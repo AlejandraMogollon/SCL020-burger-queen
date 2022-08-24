@@ -67,9 +67,8 @@ const KitchenOrders = ({ orderWithId }) => {
       </div>
       <div className="containerAlltextOrderItemsChef">
         {table1.map((orderT1, index) => {
-
-        console.log('tiempo',orderT1.time.toDate().toLocaleString())
-            //Hora actual
+          console.log("tiempo", orderT1.time.toDate().toLocaleString());
+          //Hora actual
           const currentTime = new Date();
 
           //Hora al crear el pedido
@@ -77,7 +76,7 @@ const KitchenOrders = ({ orderWithId }) => {
 
           //Diferencia de hora actual con la del pedido en milisegundos
           const diff = Math.abs(currentTime - orderTime);
-            //Los volvemos minutos
+          //Los volvemos minutos
           const diffTimeInMinutes = Math.floor(diff / 1000 / 60);
 
           const timeCssColorChange =
@@ -121,21 +120,21 @@ const KitchenOrders = ({ orderWithId }) => {
         })}
 
         {table2.map((orderT2, index) => {
-            const today = new Date();
+          const today = new Date();
 
-            const orderTime = orderT2.time.toDate();
-  
-            const diff = Math.abs(today - orderTime);
-  
-            const diffTimeInMinutes = Math.floor(diff / 1000 / 60);
-  
-            const timeCssColorChange =
-              diffTimeInMinutes < 5
-                ? "containerOrderOnTimeKitchen"
-                : diffTimeInMinutes >= 5 && diffTimeInMinutes < 10
-                ? "containerOrderFiveMinKitchen"
-                : "containerOrderDelayedKitchen";
-  
+          const orderTime = orderT2.time.toDate();
+
+          const diff = Math.abs(today - orderTime);
+
+          const diffTimeInMinutes = Math.floor(diff / 1000 / 60);
+
+          const timeCssColorChange =
+            diffTimeInMinutes < 5
+              ? "containerOrderOnTimeKitchen"
+              : diffTimeInMinutes >= 5 && diffTimeInMinutes < 10
+              ? "containerOrderFiveMinKitchen"
+              : "containerOrderDelayedKitchen";
+
           return orderT2.status === "cooking" ? (
             <div key={index} className={timeCssColorChange}>
               <div>
@@ -170,20 +169,20 @@ const KitchenOrders = ({ orderWithId }) => {
         })}
 
         {table3.map((orderT3, index) => {
-            const today = new Date();
+          const today = new Date();
 
-            const orderTime = orderT3.time.toDate();
-  
-            const diff = Math.abs(today - orderTime);
-  
-            const diffTimeInMinutes = Math.floor(diff / 1000 / 60);
-  
-            const timeCssColorChange =
-              diffTimeInMinutes < 5
-                ? "containerOrderOnTimeKitchen"
-                : diffTimeInMinutes >= 5 && diffTimeInMinutes < 10
-                ? "containerOrderFiveMinKitchen"
-                : "containerOrderDelayedKitchen";
+          const orderTime = orderT3.time.toDate();
+
+          const diff = Math.abs(today - orderTime);
+
+          const diffTimeInMinutes = Math.floor(diff / 1000 / 60);
+
+          const timeCssColorChange =
+            diffTimeInMinutes < 5
+              ? "containerOrderOnTimeKitchen"
+              : diffTimeInMinutes >= 5 && diffTimeInMinutes < 10
+              ? "containerOrderFiveMinKitchen"
+              : "containerOrderDelayedKitchen";
           return orderT3.status === "cooking" ? (
             <div key={index} className={timeCssColorChange}>
               <div>
@@ -218,20 +217,20 @@ const KitchenOrders = ({ orderWithId }) => {
         })}
 
         {table4.map((orderT4, index) => {
-            const today = new Date();
+          const today = new Date();
 
-            const orderTime = orderT4.time.toDate();
-  
-            const diff = Math.abs(today - orderTime);
-  
-            const diffTimeInMinutes = Math.floor(diff / 1000 / 60);
-  
-            const timeCssColorChange =
-              diffTimeInMinutes < 5
-                ? "containerOrderOnTimeKitchen"
-                : diffTimeInMinutes >= 5 && diffTimeInMinutes < 10
-                ? "containerOrderFiveMinKitchen"
-                : "containerOrderDelayedKitchen";
+          const orderTime = orderT4.time.toDate();
+
+          const diff = Math.abs(today - orderTime);
+
+          const diffTimeInMinutes = Math.floor(diff / 1000 / 60);
+
+          const timeCssColorChange =
+            diffTimeInMinutes < 5
+              ? "containerOrderOnTimeKitchen"
+              : diffTimeInMinutes >= 5 && diffTimeInMinutes < 10
+              ? "containerOrderFiveMinKitchen"
+              : "containerOrderDelayedKitchen";
           return orderT4.status === "cooking" ? (
             <div key={index} className={timeCssColorChange}>
               <div>
